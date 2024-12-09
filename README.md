@@ -1,71 +1,50 @@
-# commit-gpt README
+# Commit GPT
 
-This is the README for your extension "commit-gpt". After writing up a brief description, we recommend including the following sections.
+The "Commit GPT" extension generates commit messages based on code changes (diffs) using the OpenAI API. It helps you write clear, concise, and professional messages directly from Visual Studio Code.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- **Automatic Commit Message Generation**: Uses AI to analyze code diffs and create appropriate messages.
+- **Interactive Interface**: Displays a popup with the generated message and options to confirm or cancel the commit.
+- **Git Integration**: Automatically runs the `git commit` command upon confirming a message.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- A project with Git version control.
+- OpenAI API Key:
+  - Sign up at [OpenAI](https://platform.openai.com/signup).
+  - Generate an API key from [OpenAI API Keys](https://platform.openai.com/account/api-keys).
+  - Configure the key in the extension settings in VS Code (`chatgpt.apiKey`).
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- `chatgpt.apiKey`: API key to interact with OpenAI.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- Message generation may fail if there are no changes in the staging area (`git add`).
+- Ensure Git is correctly configured on your system.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+- Initial release with support for:
+  - Commit message generation based on diffs.
+  - Interactive interface to confirm or cancel the commit.
 
 ---
 
 ## Following extension guidelines
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+This extension adheres to the [best practices guidelines](https://code.visualstudio.com/api/references/extension-guidelines) for Visual Studio Code.
 
 ## Working with Markdown
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+You can write and edit this README using Visual Studio Code. Access the preview (`Shift+Ctrl+V` or `Shift+Cmd+V` on macOS) to verify formatting.
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+---
 
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+**Enjoy a smoother and more professional commit experience with Commit GPT!**
